@@ -59,6 +59,10 @@
           "configurations": {
             "production": {
               "browserTarget": "experiments-appveyor:build:production"
+            },
+            "ci": {
+              "browserTarget": "experiments-appveyor:build:production",
+              "progress": false
             }
           }
         },
@@ -107,7 +111,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "experiments-appveyor:serve"
+            "devServerTarget": "experiments-appveyor:serve:ci"
           },
           "configurations": {
             "production": {
