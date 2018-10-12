@@ -22,7 +22,7 @@ build: off
 test_script:
   - npm run lint
   - npm test -- --progress=false
-  - npm run e2e
+  - appveyor-retry npm run e2e
   - npm run build -- --progress=false
 
 on_finish:
