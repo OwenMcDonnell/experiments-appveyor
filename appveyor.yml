@@ -15,7 +15,7 @@ install:
   - node --version
   - npm --version
   - choco install googlechrome --limit-output --ignore-checksum
-  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+  
 
 build: off
 
@@ -24,3 +24,6 @@ test_script:
   - npm test -- --progress=false
   - appveyor-retry npm run e2e
   - npm run build -- --progress=false
+
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
