@@ -17,7 +17,7 @@ install:
   - npm --version
   - choco install googlechrome --limit-output --ignore-checksum
   #- mkdir C:\projects\experiments-appveyor\node_modules\protractor\node_modules\webdriver-manager\selenium
-  #- curl -oC:\projects\experiments-appveyor\node_modules\protractor\node_modules\webdriver-manager\selenium\chrome-response.xml https://chromedriver.storage.googleapis.com/
+  - curl -oC:\projects\experiments-appveyor\node_modules\protractor\node_modules\webdriver-manager\selenium\chrome-response.xml https://chromedriver.storage.googleapis.com/
   
 
 build: off
