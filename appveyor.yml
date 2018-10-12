@@ -4,6 +4,7 @@ skip_branch_with_pr: true
 
 environment:
   nodejs_version: "8"
+  appveyor_build_worker_cloud: gce
 
 cache:
   - node_modules -> package.json
